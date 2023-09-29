@@ -5,6 +5,7 @@ import './postscreen.css'
 import { PostComponent } from '../../components/PostComponent/PostComponent'
 import Loading from '../../components/Loading/Loading'
 import { SearchBar } from '../../components/SearchBar/SearchBar'
+import { NotFound } from '../../components/NotFound/NotFound'
 
 export const PostsScreen = () => {
   const [postList, setPostlist]= useState<Post[]>([])
@@ -73,6 +74,10 @@ export const PostsScreen = () => {
         :
         <>
         {
+          postListFiltered.length === 0 
+          ? 
+          <NotFound/>
+          :
           postListFiltered.map((post: Post) =>(
             <PostComponent
               image={post.image}
