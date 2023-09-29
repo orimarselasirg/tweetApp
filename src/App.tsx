@@ -9,7 +9,7 @@ import Loading from "./components/Loading/Loading";
 
 const App = () => {
   const { isAuthenticated, user, isLoading } = useAuth0();
-  console.log(user);
+  // console.log(user);
 return (
   <div>
       {

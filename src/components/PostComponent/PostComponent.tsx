@@ -8,8 +8,6 @@ import { UserDetailScreen } from '../../screens/UserDetails/UserDetailScreen';
 import { CommentsScreen } from '../../screens/Comments/CommentsScreen';
 import 'react-responsive-modal/styles.css';
 import './postcomponent.css'
-// import '../Modals/rmodal.css'
-
 
 export const PostComponent = ({image, likes, owner, publishDate, tags, text, id}: Post) => {
   const expresionRegular = /T\d{2}:\d{2}:\d{2}\.\d+Z$/;
@@ -23,8 +21,12 @@ export const PostComponent = ({image, likes, owner, publishDate, tags, text, id}
   },[])
 
   const commentByPost = async (id: string) => {
-    const {data} = await dummyapi.get(`/post/${id}/comment`)
-    setCommnetsByPost(data.data)
+    try {
+      const {data} = await dummyapi.get(`/post/${id}/comment`)
+      setCommnetsByPost(data.data)
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const handleOpenModal = (e:string) => {

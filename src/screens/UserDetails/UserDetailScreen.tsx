@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import { UserResponse } from '../../interfaces/UserInterfaces'
 import { dummyapi } from '../../api/api'
 import { Row } from '../../components/Row/Row'
@@ -77,14 +77,12 @@ export const UserDetailScreen = ({id}: Props) => {
             <span style={{fontSize: 60}}>{userData?.firstName}</span>
             <span style={{fontSize: 25, marginRight: 20}}>{userData?.lastName}</span>
             <div>
-              {/* <span>followers: 200</span> */}
               <span className='postStyleLabel'>Total Posts: {userPost?.data?.length}</span>
             </div>
           </div>
         </div>
         <div className='infoContainer'>
           <div className='infoSection'>
-            {/* <span>Email: {userData?.email}</span> */}
             <Row info={userData.email} label='Email'/>
             <Row info={userData.phone} label='Phone'/>
             <Row info={userData?.dateOfBirth.replace(expresionRegular, "")} label='Birthday'/>
@@ -106,12 +104,6 @@ export const UserDetailScreen = ({id}: Props) => {
 
       </div>
     }
-
-    {/* <div className="close-container" onClick={setOpen}>
-      <div className="leftright"></div>
-      <div className="rightleft"></div>
-      <label className="close">Close</label>
-    </div> */}
     </>
   )
 }

@@ -14,8 +14,6 @@ export const Profile = ({name, image}: Props) => {
   const [menu,setMenu] = useState(false)
   return (
     <div className='profileContainer'>
-      {/* <div>
-      </div> */}
         <img src={logo} alt={logo} width={70} height={75}/>
       <div className='infoUserContainer'>
         <h3>Bienvenid@, {name}</h3>

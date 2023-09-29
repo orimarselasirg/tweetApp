@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const dummyapi = axios.create({
-  baseURL: 'https://dummyapi.io/data/v1',
-  headers: {'app-id':'6515ac07e1045f3c0aa65acb' }
+  baseURL: import.meta.env.VITE_API_BASE_URL,
+  headers: {'app-id': import.meta.env.VITE_APP_ID }
 })
 
 export {dummyapi}
