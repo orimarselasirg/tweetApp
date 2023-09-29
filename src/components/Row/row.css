@@ -1,0 +1,19 @@
+.rowContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  padding: 3px
+}
+
+.labelStyle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.infoStyle {
+  font-size: 15px;
+  font-weight: 300;
+}

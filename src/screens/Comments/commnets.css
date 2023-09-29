@@ -1,0 +1,33 @@
+.commentContainer {
+  /* overflow-y: scroll; */
+  /* background-color: rgb(237, 234, 234); */
+  width: 400px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.pictureOwnerComment {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.postCommentContainer {
+  height: 130px;
+  border-bottom: 1px solid rgb(199, 199, 199);
+  padding: 10px;
+}
+
+.userInfoComment {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.commmentPost {
+  background-color: #f2f4fb;
+  height: 60%;
+  border-radius: 5px;
+  padding: 5px
+}

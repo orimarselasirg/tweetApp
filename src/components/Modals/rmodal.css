@@ -1,0 +1,86 @@
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+}
+.picture {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  z-index: 5;
+}
+
+.close-container{
+  position: relative;
+  margin: auto;
+  width: 50px;
+  height: 70px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.leftright{
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color:#0E309E;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all .3s ease-in;
+}
+
+.rightleft{
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: #0E309E;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all .3s ease-in;
+}
+
+.close{
+  margin: 60px 0 0 5px;
+  position: absolute;
+  transition: all .3s ease-in;
+  opacity: 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: #F25C66
+}
+
+.close-container:hover .leftright{
+  transform: rotate(-45deg);
+  background-color: #F25C66;
+}
+.close-container:hover .rightleft{
+  transform: rotate(45deg);
+  background-color: #F25C66;
+}
+.close-container:hover .close{
+  opacity: 1;
+}
+
+.customModal {
+  overflow-x: hidden;
+  border-radius: 5px;
+}
+
+@keyframes customEnterModalAnimation {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes customLeaveModalAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.2);
+  }
+}
